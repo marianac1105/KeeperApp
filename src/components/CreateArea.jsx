@@ -1,4 +1,6 @@
 import React from "react";
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
 
 
 function CreateArea(props) {
@@ -7,10 +9,10 @@ function CreateArea(props) {
       
         <input onChange = {props.titleInputHandler}  placeholder="Title" value = {props.titleValue} />
         <textarea onChange = {props.textInputHandler}  placeholder="Take a note..." rows="3" value = {props.textValue}/>
-        <button onClick = {() => {
+        <Fab className="addbutton" onClick = {() => {
         props.buttonHandler(props.noteItem)}}>
-      <span>Add</span>
-    </button>
+      <AddIcon/>
+    </Fab>
       
     </div>
   );
